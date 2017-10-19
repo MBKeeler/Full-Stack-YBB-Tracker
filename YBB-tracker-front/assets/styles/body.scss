@@ -1,0 +1,38 @@
+body {
+  background-color: #fff;
+}
+
+.welcome-box {
+  min-height: 220px;
+  margin: 250px auto 0px auto;
+  width: 100%;
+  background-color: #006699
+}
+
+.auth-forms {
+  max-width: 900px;
+  min-height: 200px;
+  margin: auto;
+}
+
+// div {
+//   border-width: 1px;
+//   border-color: red;
+//   border-style: solid;
+// }
+
+#login {
+  float: left;
+  width: 350px;
+  margin: 20px 120px 20px 25px ;
+}
+
+#register {
+  float: left;
+  width: 350px;
+  margin: 20px 25px 20px 25px
+}
+
+.navigation-bar {
+  display: none;
+}
