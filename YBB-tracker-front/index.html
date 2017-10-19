@@ -12,8 +12,63 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <div class="navigation-bar"></div>
-      <div class="welcome-box"></div> 
+      <div class="navigation-bar">
+          <div id="changePW">
+            <form id="change-password">
+              <fieldset>
+                <legend>Change Password</legend>
+                  <br>
+                  <input type="password" name="passwords[old]" placeholder="Password">
+                  <br>
+                  <input type="password" name="passwords[new]" placeholder="Confirm Password">
+                  <br>
+                  <input type="submit" name="submit" value="Change Password">
+              </fieldset>
+            </form>
+          </div>
+
+          <div id="message"></div>
+
+          <div id="logout">
+            <form id="sign-out">
+              <fieldset>
+                <legend>Log Out</legend>
+                  <br>
+                  <input type="submit" name="submit" value="Log Out">
+              </fieldset>
+            </form>
+          </div>
+      </div>
+      <div class="welcome-box">
+        <div class="auth-forms">
+          <div id="login">
+            <form id="sign-in">
+              <fieldset>
+                <legend>Login</legend>
+                <input type="text" name="credentials[email]"  placeholder="Enter Username">
+                <br>
+                <input id="pw-field" type="password" name="credentials[password]"  placeholder="Password">
+                <br>
+                <input type="submit" name="submit" value="Login">
+            </fieldset>
+          </form>
+          </div>
+          <div id="register">
+            <form id="sign-up">
+              <fieldset>
+                <legend>Register New User</legend>
+                  <br>
+                  <input type="text" name="credentials[email]" placeholder="Captain Name">
+                  <br>
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <br>
+                  <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                  <br>
+                  <input type="submit" name="submit" value="Register New User">
+              </fieldset>
+            </form>
+          </div>
+      </div>
       <div class="app-box"></div>
 
     </body>
