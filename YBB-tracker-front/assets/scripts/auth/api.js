@@ -6,6 +6,7 @@ const store = require('../store')
 // before using you must modify functions to conform to game api
 // pass on to events.js
 const signUp = function (data) {
+  console.log('signUp called')
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
     method: 'POST',
@@ -14,6 +15,7 @@ const signUp = function (data) {
 }
 
 const signIn = function (data) {
+  console.log('signIn called')
   return $.ajax({
     url: config.apiOrigin + '/sign-in',
     method: 'POST',
@@ -22,7 +24,7 @@ const signIn = function (data) {
 }
 
 const signOut = function () {
-  // console.log('signOut called')
+  console.log('signOut called')
   return $.ajax({
     url: config.apiOrigin + '/sign-out/' + store.user.id,
     method: 'DELETE',
@@ -33,7 +35,7 @@ const signOut = function () {
 }
 
 const changePassWord = function (data) {
-//  console.log('signOut called')
+  console.log('changePW called')
   return $.ajax({
     url: config.apiOrigin + '/change-password/' + store.user.id,
     method: 'PATCH',
@@ -43,7 +45,6 @@ const changePassWord = function (data) {
     data
   })
 }
-
 
 module.exports = {
   signUp,

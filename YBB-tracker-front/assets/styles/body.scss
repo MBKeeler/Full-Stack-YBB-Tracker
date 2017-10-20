@@ -6,13 +6,18 @@ body {
   min-height: 220px;
   margin: 250px auto 0px auto;
   width: 100%;
-  background-color: #006699
+  background-color: #496d91
+}
+
+legend {
+  color: #fff;
 }
 
 .auth-forms {
   max-width: 900px;
   min-height: 200px;
   margin: auto;
+  color: #000;
 }
 
 // div {
@@ -33,6 +38,46 @@ body {
   margin: 20px 25px 20px 25px
 }
 
-.navigation-bar {
+.navigation-bar, .enter-data, .view-data, #change-password {
   display: none;
+}
+
+.navigation-bar, .enter-data, .view-data {
+  background-color: #496d91;
+  color: #fff
+}
+
+.enter-data {
+  margin-top: 130px;
+  min-width: 900px;
+  min-height: 300px;
+}
+
+.view-data {
+  margin-top: 130px;
+  min-width: 900px;
+  min-height: 300px;
+}
+
+.navigation-bar {
+  height: 120px;
+  width: 100%;
+}
+
+#change-PW, #nav-message, #mode-switch, #logout {
+  width: 25%;
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#logout {
+  width: 25%;
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+  border-style: solid;
+  border-width: 1px;
 }
