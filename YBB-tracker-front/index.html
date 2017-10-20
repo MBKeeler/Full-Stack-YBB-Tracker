@@ -73,26 +73,36 @@
             <div id="signup-message"></div>
           </div>
       </div>
+    </div>
 <!-- ends our primary atuthentication and welcome-box -->
 
 <!-- begins the area where we enter data -->
+<!-- class="enter-data" -->
       <div class="enter-data">
-        Enter data here
-        <br>
         <form id="enter-player">
           <fieldset>
-            <legend>Register New User</legend>
-              <input type="text" name="first_name" placeholder="First Name">
+            <legend>Enter Player Information</legend>
+              <input type="text" name="player[first_name]" placeholder="First Name">
               <br>
-              <input type="text" name="last_name" placeholder="Last Name">
+              <input type="text" name="player[last_name]" placeholder="Last Name">
               <br>
-              <input type="text" name="age" placeholder="Age">
+              <input type="text" name="player[age]" placeholder="Age">
               <br>
-              <input type="text" name="grade" placeholder="Grade">
+              <input type="text" name="player[grade]" placeholder="Grade">
               <br>
-              <input type="text" name="program" placeholder="Program">
+              <input type="text" name="player[program]" placeholder="Program">
               <br>
-              <textarea rows="6" cols="30" name="Notes" form="enter-player">
+              <textarea rows="6" cols="40" name="Notes" form="enter-player"></textarea>
+              <br>
+              <input type="text" name="player[catch]" placeholder="Catching">
+              <br>
+              <input type="text" name="player[throw]" placeholder="Throwing">
+              <br>
+              <input type="text" name="player[pitch]" placeholder="Pitching">
+              <br>
+              <input type="text" name="player[bat]" placeholder="Batting">
+              <br>
+              <input type="text" name="player[athleticism]" placeholder="Athleticism">
               <br>
               <input type="submit" name="submit" value="Enter New Player">
           </fieldset>
