@@ -18,7 +18,7 @@ $(() => {
   events.addHandlers()
 })
 
-$(() => {
-  $('.box_grid').on('click', events.clickSector)
-  $('.box_grid').on('click', events.example)
-})
+// $(() => {
+//   $('.box_grid').on('click', events.clickSector)
+//   $('.box_grid').on('click', events.example)
+// })
