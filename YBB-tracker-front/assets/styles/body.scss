@@ -50,30 +50,34 @@ input, textarea {
   color: #fff
 }
 
-.enter-data {
+.enter-data, .view-data {
   margin-top: 130px;
   min-width: 900px;
   min-height: 300px;
 }
 
-.view-data {
-  margin-top: 130px;
-  min-width: 900px;
-  min-height: 300px;
-}
+// .view-data {
+//   margin-top: 130px;
+//   min-width: 900px;
+//   min-height: 300px;
+// }
 
 .navigation-bar {
   height: 120px;
   width: 100%;
 }
 
-#change-PW, #nav-message, #mode-switch, #logout {
-  width: 25%;
+#change-PW, #nav-center, #logout {
+  width: 33%;
   float: left;
   margin-top: 20px;
   margin-left: 20px;
   border-style: solid;
   border-width: 1px;
+}
+
+#nav-message, #mode-switch {
+  margin: 5px auto;
 }
 
 #logout {

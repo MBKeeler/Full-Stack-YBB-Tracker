@@ -29,8 +29,13 @@
             </form>
           </div>
 
+        <div id="navbar-center">
           <div id="nav-message"></div>
-          <div id="mode-switch"></div>
+          <div id="mode-switch">
+            <button id="view-mode" type="click" value="click">View Data</button>
+            <button id="entry-mode" type="click" value="click">Enter Data</button>
+          </div>
+        </div>
 
           <div id="logout">
             <form id="sign-out">
@@ -90,9 +95,14 @@
               <br>
               <input type="text" name="player[grade]" placeholder="Grade">
               <br>
-              <input type="text" name="player[program]" placeholder="Program">
-              <br>
-              <textarea rows="6" cols="40" name="Notes" form="enter-player"></textarea>
+              <input type="radio" name="player[program]" value="Single A"> Single A
+              <input type="radio" name="player[program]" value="Double A"> Double A
+              <input type="radio" name="player[program]" value="Triple A"> Triple A
+              <input type="radio" name="player[program]" value="Majors"> Majors
+              <input type="radio" name="player[program]" value="SB Farm"> SB Farm
+              <input type="radio" name="player[program]" value="SB Juniors"> SB Juniors
+              <input type="radio" name="player[program]" value="SB Seniors"> SB Seniors
+              <textarea rows="6" cols="50" name="Notes" form="enter-player"></textarea>
               <br>
               <input type="text" name="player[catch]" placeholder="Catching">
               <br>
@@ -115,10 +125,27 @@
 <!-- begins the area where we can view data -->
       <div class="view-data">
         View data here
-        <!-- "view-allPlayers" -->
+        <form id="view-options">
+          <fieldset>
+            <legend>View Player Data</legend>
+          <input type="radio" name="player[program]" value="program" checked> By Program
+          <br>
+          <input type="radio" name="player[grade]" value="grade"> By Grade
+          <br>
+          <input type="radio" name="player[age]" value="age"> By Age
+          <br>
+          <input type="submit" name="submit" value="View Assessment Data">
+        </fieldset>
+        </form>
+
+        <div id="view-allPlayers">
+        </div>
 
       </div>
-<!-- ends the area where we can enter data -->
+
+
+
+<!-- ends the area where we can view data -->
 
     </body>
 </html>
