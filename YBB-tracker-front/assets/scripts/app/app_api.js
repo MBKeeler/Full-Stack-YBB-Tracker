@@ -3,19 +3,25 @@ const config = require('../config')
 const store = require('../store')
 
 const enterPlayer = function (data) {
-  console.log('enterData called')
+  console.log('enterPlayer called:', data)
   return $.ajax({
-    url: config.apiOrigin + '/players/' + store.user.id,
+    url: config.apiOrigin + '/players',
     method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data
   })
 }
 
 const modifyPlayer = function (data) {
-  console.log('modifyPlayer called')
+  console.log('modifyPlayer called: ', data)
   return $.ajax({
-    url: config.apiOrigin + '/players/' + store.user.id,
+    url: config.apiOrigin + '/players/' + data.event.id,
     method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data
   })
 }
@@ -25,6 +31,9 @@ const deletePlayer = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/players/' + store.user.id,
     method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data
   })
 }
@@ -34,6 +43,9 @@ const findPlayer = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/players/' + store.user.id,
     method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data
   })
 }
@@ -42,7 +54,10 @@ const showAllPlayers = function (data) {
   console.log('findPlayer called')
   return $.ajax({
     url: config.apiOrigin + '/players/' + store.user.id,
-    method: 'POST',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data
   })
 }

@@ -7,7 +7,7 @@ const ui = require('./app_ui')
 const onEnterPlayer = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  //  console.log('sign-up', data)
+  console.log('enterPlayer called', data)
   api.enterPlayer(data)
     .then(ui.enterPlayerSuccess)
     .catch(ui.enterPlayerFailure)
