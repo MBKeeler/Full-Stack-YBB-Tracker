@@ -3,7 +3,7 @@ const config = require('../config')
 const store = require('../store')
 
 const enterPlayer = function (data) {
-  console.log('enterPlayer called:', data)
+  console.log('app_api.enterPlayer called:', data)
   return $.ajax({
     url: config.apiOrigin + '/players',
     method: 'POST',
@@ -39,9 +39,9 @@ const deletePlayer = function (data) {
 }
 
 const findPlayer = function (data) {
-  console.log('findPlayer called')
+  console.log('app_api.findPlayer called', data)
   return $.ajax({
-    url: config.apiOrigin + '/players/' + store.user.id,
+    url: config.apiOrigin + '/players',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -50,15 +50,15 @@ const findPlayer = function (data) {
   })
 }
 
-const showAllPlayers = function (data) {
-  console.log('findPlayer called')
+const showAllPlayers = function () {
+  console.log('findPlayer called with data:')
   return $.ajax({
-    url: config.apiOrigin + '/players/' + store.user.id,
+    url: config.apiOrigin + '/players',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
+    // data
   })
 }
 

@@ -51,16 +51,18 @@ input, textarea {
 }
 
 .enter-data, .view-data {
-  margin-top: 130px;
-  min-width: 900px;
-  min-height: 300px;
+  margin: 65px auto;
+  width: 900px;
+  min-height: 450px;
 }
 
-// .view-data {
-//   margin-top: 130px;
-//   min-width: 900px;
-//   min-height: 300px;
-// }
+form {
+  margin: 10px 20px;
+}
+
+.program-radio {
+  margin: 5px, 5px;
+}
 
 .navigation-bar {
   height: 120px;

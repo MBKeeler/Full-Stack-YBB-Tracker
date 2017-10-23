@@ -1,0 +1,15 @@
+{{#each players as |player|}}
+
+  <!-- {{> partial}} -->
+
+
+ <!-- Developers, why are we using data-id and not just id? -->
+  <ul data-id="{{player.id}}">
+  <li><small>Last Name: {{player.last_name}}</small></li>
+  <li><small>First Name: {{player.first_name}}</small></li>
+  <li><small>Program: {{player.program}}</small></li>
+
+  <li><button id="deltePlayerButton" type='button'>Delete Player</li>
+</ul>
+
+{{/each}}

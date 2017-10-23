@@ -81,9 +81,26 @@
     </div>
 <!-- ends our primary atuthentication and welcome-box -->
 
-<!-- begins the area where we enter data -->
-<!-- class="enter-data" -->
-      <div class="enter-data">
+<!-- begins the area where we find a player or enter data -->
+<div class="enter-data">
+<!-- Begin Find a player -->
+        <form id="find-player">
+          <fieldset>
+            <legend>Find a Player</legend>
+              <input type="text" name="player[first_name]" placeholder="First Name">
+              <br>
+              <input type="text" name="player[last_name]" placeholder="Last Name">
+              <input type="submit" name="submit" value="Find Player">
+          </fieldset>
+        </form>
+        <div id="show-a-player"></div>
+
+        <button type="submit" name="modify-player">Update Player</button>
+        <br>
+        <button type="submit" name="delete-player">Update Player</button>
+        <!-- Ends find a player -->
+        <!-- class="enter-data" -->
+
         <form id="enter-player">
           <fieldset>
             <legend>Enter Player Information</legend>
@@ -95,13 +112,13 @@
               <br>
               <input type="text" name="player[grade]" placeholder="Grade">
               <br>
-              <input type="radio" name="player[program]" value="Single A"> Single A
-              <input type="radio" name="player[program]" value="Double A"> Double A
-              <input type="radio" name="player[program]" value="Triple A"> Triple A
-              <input type="radio" name="player[program]" value="Majors"> Majors
-              <input type="radio" name="player[program]" value="SB Farm"> SB Farm
-              <input type="radio" name="player[program]" value="SB Juniors"> SB Juniors
-              <input type="radio" name="player[program]" value="SB Seniors">
+              <input class="program-radio" type="radio" name="player[program]" value="Single A"> Single A
+              <input class="program-radio" type="radio" name="player[program]" value="Double A"> Double A
+              <input class="program-radio" type="radio" name="player[program]" value="Triple A"> Triple A
+              <input class="program-radio" type="radio" name="player[program]" value="Majors"> Majors
+              <input class="program-radio" type="radio" name="player[program]" value="SB Farm"> SB Farm
+              <input class="program-radio" type="radio" name="player[program]" value="SB Juniors"> SB Juniors
+              <input class="program-radio" type="radio" name="player[program]" value="SB Seniors">
               SB Seniors
               <br>
               <textarea rows="6" cols="50" name="Notes" form="enter-player"></textarea>
@@ -119,23 +136,21 @@
               <input type="submit" name="submit" value="Enter New Player">
           </fieldset>
         </form>
-        <!-- <button type="submit" name="modify-player">Update Player</button> -->
-        <!-- <button type="submit" name="delete-player">Update Player</button> -->
-      </div>
+</div>
 <!-- ends the area where we enter data -->
 
 <!-- begins the area where we can view data -->
       <div class="view-data">
         View data here
-        <form id="view-options">
+        <form id="view-allPlayers">
           <fieldset>
             <legend>View Player Data</legend>
-          <input type="radio" name="player[program]" value="program" checked> By Program
+          <!-- <input type="radio" name="player[program]" value="program" checked> By Program
           <br>
           <input type="radio" name="player[grade]" value="grade"> By Grade
           <br>
           <input type="radio" name="player[age]" value="age"> By Age
-          <br>
+          <br> -->
           <input type="submit" name="submit" value="View Assessment Data">
         </fieldset>
         </form>

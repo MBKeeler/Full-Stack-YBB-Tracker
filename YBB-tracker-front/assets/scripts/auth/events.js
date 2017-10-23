@@ -95,10 +95,17 @@ const onShowAllPlayers = function (event) {
   console.log('onShowAllPlayers called')
   const data = getFormFields(this)
   event.preventDefault()
-  //  console.log('sign-up', data)
-  app_api.enterPlayer(data)
+  app_api.showAllPlayers(data)
     .then(app_ui.showAllPlayersSuccess)
     .catch(app_ui.showAllPlayersFailure)
+}
+// toggle view methods
+const onToggleEntryMode = function (event) {
+  app_ui.toggleEntryMode()
+}
+
+const onToggleViewMode = function (event) {
+  app_ui.toggleViewMode()
 }
 
 const addHandlers = function () {
@@ -110,8 +117,10 @@ const addHandlers = function () {
   $('#enter-player').on('submit', onEnterPlayer)
   $('#modify-player').on('submit', onModifyPlayer)
   $('#delete-player').on('click', onDeletePlayer)
-  $('#find-player').on('click', onFindPlayer)
-  $('#view-allPlayers').on('click', onShowAllPlayers)
+  $('#find-player').on('submit', onFindPlayer)
+  $('#view-allPlayers').on('submit', onShowAllPlayers)
+  $('#view-mode').on('click', onToggleViewMode)
+  $('#entry-mode').on('click', onToggleEntryMode)
 }
 
 module.exports = {

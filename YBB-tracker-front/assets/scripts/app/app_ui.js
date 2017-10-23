@@ -1,6 +1,7 @@
 'use strict'
 // const config = require('../config')
 // const store = require('../store')
+const showPlayerTemplate = require('../templates/player_list.handlebars')
 const store = require('../store')
 
 const enterPlayerSuccess = function () {
@@ -22,8 +23,9 @@ const modifyPlayerFailure = function (error) {
   console.log('modifyPlayerFailure called', error)
 }
 
-const findPlayerSuccess = function () {
-  console.log('findPlayerSuccess called')
+const findPlayerSuccess = function (data) {
+  console.log('findPlayerSuccess called', data)
+  $('show-a-player').html('data goes here: ' + data)
 }
 
 const findPlayerFailure = function (error) {
@@ -38,12 +40,28 @@ const deletePlayerFailure = function (error) {
   console.log('deletePlayerFailure called', error)
 }
 
-const showAllPlayersSuccess = function () {
-  console.log('showAllPlayersSuccess called')
+const showAllPlayersSuccess = function (data) {
+  console.log('showAllPlayersSuccess called', data)
 }
 
 const showAllPlayersFailure = function (error) {
   console.log('showAllPlayersFailure called', error)
+}
+
+const getPlayersSuccess = (data) => {
+  console.log(data)
+  const showPlayersHtml = showPlayerTemplate({ players: data.players })
+  $('#view-allPlayers').append(showPlayersHtml)
+}
+
+const toggleViewMode = function () {
+  $('.view-data').show()
+  $('.enter-data').hide()
+}
+
+const toggleEntryMode = function () {
+  $('.enter-data').show()
+  $('.view-data').hide()
 }
 
 module.exports = {
@@ -56,5 +74,8 @@ module.exports = {
   deletePlayerSuccess,
   deletePlayerFailure,
   showAllPlayersSuccess,
-  showAllPlayersFailure
+  showAllPlayersFailure,
+  toggleEntryMode,
+  toggleViewMode,
+  getPlayersSuccess
 }
