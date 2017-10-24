@@ -3,7 +3,7 @@
 // const store = require('../store')
 const app_api = require('./app_api')
 const showPlayerTemplate = require('../templates/helpers/player_list.handlebars')
-const store = require('../store')
+// const store = require('../store')
 
 const enterPlayerSuccess = function () {
   console.log('data entered successfully')
@@ -72,6 +72,15 @@ const toggleModForm = function () {
   $('#modify-a-player').show()
   $('#view-PlayersList').hide()
 }
+const revealChngPwForm = function () {
+  // console.log('app_ui.reavealChangePWForm called')
+  $('#change-password').show()
+}
+
+const hideChngePwForm = function () {
+  $('#change-password').hide()
+}
+
 
 module.exports = {
   enterPlayerSuccess,
@@ -87,5 +96,7 @@ module.exports = {
   toggleEntryMode,
   toggleViewMode,
   getPlayersSuccess,
-  toggleModForm
+  toggleModForm,
+  revealChngPwForm,
+  hideChngePwForm
 }

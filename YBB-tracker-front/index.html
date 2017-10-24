@@ -16,32 +16,28 @@
 <!-- starts our navigation-bar viewable in the app body -->
       <div class="navigation-bar">
           <div id="change-PW">
-            <button id="change-pw-reveal" type="click">Change PW</button>
+            <button id="sign-out" type="click" name="submit">Log Out</button>
+            <button id="change-pw-reveal" type="click">Change Password</button>
             <form id="change-password">
               <fieldset>
                 <legend>Change Password</legend>
-                  <input type="password" name="passwords[old]" placeholder="Password">
+                  <input type="password" name="passwords[old]" placeholder="Curent Password">
                   <br>
-                  <input type="password" name="passwords[new]" placeholder="Confirm Password">
+                  <input type="password" name="passwords[new]" placeholder="New Password">
                   <br>
-                  <input type="submit" name="submit" value="Change Password">
+                  <Button type="submit" name="submit" >Change Password</button>
               </fieldset>
+              <button id="cancel" type="submit" name="click" >Cancel</button>
             </form>
           </div>
 
         <div id="navbar-center">
-          <div id="nav-message"></div>
           <div id="mode-switch">
             <button id="view-mode" type="click" value="click">View Data</button>
             <button id="entry-mode" type="click" value="click">Enter Data</button>
           </div>
         </div>
-
-          <div id="logout">
-            <form id="sign-out">
-                  <input type="submit" name="submit" value="Log Out">
-            </form>
-          </div>
+        <div id="nav-message"></div>
       </div>
 <!-- ends our navigation-bar  -->
 
@@ -56,7 +52,7 @@
                 <br>
                 <input id="pw-field" type="password" name="credentials[password]"  placeholder="Password">
                 <br>
-                <input type="submit" name="submit" value="Login">
+                <button type="submit" name="submit" value="Login">Login as Member</button>
             </fieldset>
           </form>
           <br>
@@ -72,7 +68,7 @@
                   <br>
                   <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
                   <br>
-                  <input type="submit" name="submit" value="Register New User">
+                  <button type="submit" name="submit" value="Register New User">Register New User</button>
               </fieldset>
             </form>
             <div id="signup-message"></div>

@@ -108,12 +108,16 @@ const onToggleEntryMode = function (event) {
 const onToggleViewMode = function (event) {
   app_ui.toggleViewMode()
 }
-const onReviewPwForm = function (event) {
-  app_ui.toggleViewMode()
+const onRevealPwForm = function (event) {
+  app_ui.revealChngPwForm()
 }
 
 const onShowModForm = function (event) {
   app_ui.toggleModForm()
+}
+
+const onHidePwForm = function (event) {
+  app_ui.hideChngePwForm()
 }
 // handlebars
 const onGetPlayers = (event) => {
@@ -126,7 +130,7 @@ const onGetPlayers = (event) => {
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
-  $('#sign-out').on('submit', onSignOut)
+  $('#sign-out').on('click', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('#enter-player').on('submit', onEnterPlayer)
   // $('#modify-a-player').on('submit', onModifyPlayer)
@@ -137,7 +141,8 @@ const addHandlers = function () {
   $('#view-mode').on('click', onToggleViewMode)
   $('#entry-mode').on('click', onToggleEntryMode)
   $('#view-modify-form').on('click', onShowModForm)
-  $('#change-pw-reveal').on('click', onReviewPwForm)
+  $('#change-pw-reveal').on('click', onRevealPwForm)
+  $('#cancel').on('click', onHidePwForm)
 }
 
 module.exports = {
