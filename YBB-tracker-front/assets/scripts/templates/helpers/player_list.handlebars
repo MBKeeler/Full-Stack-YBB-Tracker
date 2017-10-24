@@ -1,15 +1,25 @@
 {{#each players as |player|}}
 
   <!-- -->
-
-
- <!-- Developers, why are we using data-id and not just id? -->
+{{#if player}}
   <ul data-id="{{player.id}}">
-  <li><small>Last Name: {{player.last_name}}</small></li>
-  <li><small>First Name: {{player.first_name}}</small></li>
-  <li><small>Program: {{player.program}}</small></li>
+    <li><small>Player ID: {{player.id}}</small></li>
+    <li><small>Last Name: {{player.last_name}}</small></li>
+    <li><small>First Name: {{player.first_name}}</small></li>
+    <li><small>Program: {{player.program}}</small></li>
+    <li><small>Age: {{player.age}}</small></li>
+    <li><small>Grade: {{player.grade}}</small></li>
+    <li><small>Notes: {{player.notes}}</small></li>
+    <li><small>Catch Score: {{player.catch}}</small></li>
+    <li><small>Throw Score: {{player.throw}}</small></li>
+    <li><small>Pitch Score: {{player.pitch}}</small></li>
+    <li><small>Batting Score: {{player.bat}}</small></li>
+    <li><small>Athleticism: {{player.athleticism}}</small></li>
 
-  <li><button id="deltePlayerButton" type='button'>Delete Player</li>
+    <div id="delete"><button id="deleteB" value="{{player.id}}" name='delete' type='click'>Delete Player</button></div>
 </ul>
+{{else}}
+    There are no players on record for this user.
+{{/if}}
 
 {{/each}}

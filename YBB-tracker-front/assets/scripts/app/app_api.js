@@ -27,9 +27,9 @@ const modifyPlayer = function (data) {
 }
 
 const deletePlayer = function (data) {
-  console.log('modifyPlayer called')
+  console.log('deltePlayer called')
   return $.ajax({
-    url: config.apiOrigin + '/players/' + store.user.id,
+    url: config.apiOrigin + '/players/' + data,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -51,7 +51,7 @@ const findPlayer = function (data) {
 }
 
 const showAllPlayers = function () {
-  console.log('findPlayer called with data:')
+  console.log('showAllPlayers called')
   return $.ajax({
     url: config.apiOrigin + '/players',
     method: 'GET',

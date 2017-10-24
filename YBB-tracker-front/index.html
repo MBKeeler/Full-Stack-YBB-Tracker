@@ -141,7 +141,6 @@
 
 <!-- begins the area where we can view data -->
       <div class="view-data">
-        View data here
         <form id="view-allPlayers">
           <fieldset>
             <legend>View Player Data</legend>
@@ -154,8 +153,13 @@
           <input type="submit" name="submit" value="View Assessment Data">
         </fieldset>
         </form>
+        <form id="deletePlayerButton">
+          Player to Delete <input type="number" name="player[id]">
+          <button name='deletePlayerButton' type='click'>Delete Player</button>
+        </form>
 
-        <div id="view-allPlayers">
+
+        <div id="view-PlayersList">
         </div>
 
       </div>

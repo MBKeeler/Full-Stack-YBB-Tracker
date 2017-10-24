@@ -73,12 +73,15 @@ const onModifyPlayer = function (event) {
 
 const onDeletePlayer = function (event) {
   console.log('onDeletePlayer called')
-  const data = getFormFields(this)
+  console.log('event.target is', event.target)
+  // const data = getFormFields(this)
   event.preventDefault()
   //  console.log('sign-up', data)
-  app-api.deletePlayer(data)
+  const data = $(event.target).attr('value')
+  console.log('data', data)
+  app_api.deletePlayer(data)
     .then(app_ui.deletePlayerSuccess)
-    .catch(app_ui.deletePlayerSuccess)
+    .catch(app_ui.deletePlayerFailure)
 }
 
 const onFindPlayer = function (event) {
@@ -121,9 +124,9 @@ const addHandlers = function () {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('#enter-player').on('submit', onEnterPlayer)
-  $('#enter-player').on('submit', onEnterPlayer)
+  // $('#enter-player').on('submit', onEnterPlayer)
   $('#modify-player').on('submit', onModifyPlayer)
-  $('#delete-player').on('click', onDeletePlayer)
+  $('#view-PlayersList').on('click', '#deleteB', onDeletePlayer)
   $('#find-player').on('submit', onFindPlayer)
   $('#view-allPlayers').on('submit', onGetPlayers)
   $('#view-mode').on('click', onToggleViewMode)

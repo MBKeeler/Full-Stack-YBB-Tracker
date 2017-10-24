@@ -51,7 +51,8 @@ const showAllPlayersFailure = function (error) {
 const getPlayersSuccess = (data) => {
   console.log(data)
   const showPlayersHtml = showPlayerTemplate({ players: data.players })
-  $('#view-allPlayers').append(showPlayersHtml)
+  $('#view-PlayersList').append(showPlayersHtml)
+  // $('#view-allPlayers').append(showPlayersHtml)
 }
 
 const toggleViewMode = function () {

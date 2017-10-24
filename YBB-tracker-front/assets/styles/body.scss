@@ -2,6 +2,22 @@ body {
   background-color: #fff;
 }
 
+button {
+    background-color: #f4c542;
+    border: none;
+    color: white;
+    padding: 3px 3px;
+    margin: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+button:hover {
+  background-color: #f4a742;
+}
+
 .welcome-box {
   min-height: 220px;
   margin: 250px auto 0px auto;
@@ -54,6 +70,10 @@ input, textarea {
   margin: 65px auto;
   width: 900px;
   min-height: 450px;
+}
+
+#view-allPlayers {
+  margin: 10px 5px;
 }
 
 form {
