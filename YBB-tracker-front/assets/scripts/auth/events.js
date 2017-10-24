@@ -90,15 +90,15 @@ const onFindPlayer = function (event) {
     .then(app_ui.findPlayerSuccess)
     .catch(app_ui.findPlayerFailure)
 }
-
-const onShowAllPlayers = function (event) {
-  console.log('onShowAllPlayers called')
-  const data = getFormFields(this)
-  event.preventDefault()
-  app_api.showAllPlayers(data)
-    .then(app_ui.showAllPlayersSuccess)
-    .catch(app_ui.showAllPlayersFailure)
-}
+// working code.  keep.  using handlebars below
+// const onShowAllPlayers = function (event) {
+//   console.log('onShowAllPlayers called')
+//   const data = getFormFields(this)
+//   event.preventDefault()
+//   app_api.showAllPlayers(data)
+//     .then(app_ui.showAllPlayersSuccess)
+//     .catch(app_ui.showAllPlayersFailure)
+// }
 // toggle view methods
 const onToggleEntryMode = function (event) {
   app_ui.toggleEntryMode()
@@ -106,6 +106,13 @@ const onToggleEntryMode = function (event) {
 
 const onToggleViewMode = function (event) {
   app_ui.toggleViewMode()
+}
+// handlebars
+const onGetPlayers = (event) => {
+  event.preventDefault()
+  app_api.showAllPlayers()
+    .then(app_ui.getPlayersSuccess)
+    .catch(app_ui.showAllPlayersFailure)
 }
 
 const addHandlers = function () {
@@ -118,7 +125,7 @@ const addHandlers = function () {
   $('#modify-player').on('submit', onModifyPlayer)
   $('#delete-player').on('click', onDeletePlayer)
   $('#find-player').on('submit', onFindPlayer)
-  $('#view-allPlayers').on('submit', onShowAllPlayers)
+  $('#view-allPlayers').on('submit', onGetPlayers)
   $('#view-mode').on('click', onToggleViewMode)
   $('#entry-mode').on('click', onToggleEntryMode)
 }

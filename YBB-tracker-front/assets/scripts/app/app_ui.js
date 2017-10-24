@@ -1,7 +1,7 @@
 'use strict'
 // const config = require('../config')
 // const store = require('../store')
-const showPlayerTemplate = require('../templates/player_list.handlebars')
+const showPlayerTemplate = require('../templates/helpers/player_list.handlebars')
 const store = require('../store')
 
 const enterPlayerSuccess = function () {
