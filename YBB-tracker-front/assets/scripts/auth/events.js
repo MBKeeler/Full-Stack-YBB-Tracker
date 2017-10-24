@@ -108,6 +108,9 @@ const onToggleEntryMode = function (event) {
 const onToggleViewMode = function (event) {
   app_ui.toggleViewMode()
 }
+const onReviewPwForm = function (event) {
+  app_ui.toggleViewMode()
+}
 
 const onShowModForm = function (event) {
   app_ui.toggleModForm()
@@ -134,6 +137,7 @@ const addHandlers = function () {
   $('#view-mode').on('click', onToggleViewMode)
   $('#entry-mode').on('click', onToggleEntryMode)
   $('#view-modify-form').on('click', onShowModForm)
+  $('#change-pw-reveal').on('click', onReviewPwForm)
 }
 
 module.exports = {
