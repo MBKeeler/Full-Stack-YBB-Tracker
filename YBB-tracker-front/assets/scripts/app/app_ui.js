@@ -52,6 +52,7 @@ const deletePlayerFailure = function (error) {
 
 const getPlayersSuccess = (data) => {
   console.log(data)
+  $('#view-PlayersList').show()
   const showPlayersHtml = showPlayerTemplate({ players: data.players })
   $('#view-PlayersList').append(showPlayersHtml)
   // $('#view-allPlayers').append(showPlayersHtml)
@@ -67,6 +68,11 @@ const toggleEntryMode = function () {
   $('.view-data').hide()
 }
 
+const toggleModForm = function () {
+  $('#modify-a-player').show()
+  $('#view-PlayersList').hide()
+}
+
 module.exports = {
   enterPlayerSuccess,
   enterPlayerFailure,
@@ -80,5 +86,6 @@ module.exports = {
   // showAllPlayersFailure,
   toggleEntryMode,
   toggleViewMode,
-  getPlayersSuccess
+  getPlayersSuccess,
+  toggleModForm
 }

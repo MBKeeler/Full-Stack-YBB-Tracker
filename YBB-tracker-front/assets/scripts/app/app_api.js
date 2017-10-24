@@ -15,9 +15,10 @@ const enterPlayer = function (data) {
 }
 
 const modifyPlayer = function (data) {
-  console.log('modifyPlayer called: ', data)
+  console.log('app_api.modifyPlayer called: ', data.player.id)
+  const playerID = data.player.id
   return $.ajax({
-    url: config.apiOrigin + '/players/' + data.event.id,
+    url: config.apiOrigin + '/players/' + playerID,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token

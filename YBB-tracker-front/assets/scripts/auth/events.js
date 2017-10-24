@@ -56,29 +56,27 @@ const onChangePassword = function (event) {
 const onEnterPlayer = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  console.log('enterPlayer called', data)
+  // console.log('enterPlayer called', data)
   app_api.enterPlayer(data)
     .then(app_ui.enterPlayerSuccess)
     .catch(app_ui.enterPlayerFailure)
 }
 
 const onModifyPlayer = function (event) {
+  console.log('onModifyPlayer called')
   const data = getFormFields(this)
   event.preventDefault()
-  //  console.log('sign-up', data)
   app_api.modifyPlayer(data)
     .then(app_ui.modifyPlayerSuccess)
-    .catch(app_ui.modifyPlayerSuccess)
+    .catch(app_ui.modifyPlayerFailure)
 }
 
 const onDeletePlayer = function (event) {
-  console.log('onDeletePlayer called')
-  console.log('event.target is', event.target)
-  // const data = getFormFields(this)
+  // console.log('onDeletePlayer called')
+  // console.log('event.target is', event.target)
   event.preventDefault()
-  //  console.log('sign-up', data)
   const data = $(event.target).attr('value')
-  console.log('data', data)
+  // console.log('data', data)
   app_api.deletePlayer(data)
     .then(app_ui.deletePlayerSuccess)
     .catch(app_ui.deletePlayerFailure)
@@ -110,6 +108,10 @@ const onToggleEntryMode = function (event) {
 const onToggleViewMode = function (event) {
   app_ui.toggleViewMode()
 }
+
+const onShowModForm = function (event) {
+  app_ui.toggleModForm()
+}
 // handlebars
 const onGetPlayers = (event) => {
   event.preventDefault()
@@ -124,13 +126,14 @@ const addHandlers = function () {
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onChangePassword)
   $('#enter-player').on('submit', onEnterPlayer)
-  // $('#enter-player').on('submit', onEnterPlayer)
+  // $('#modify-a-player').on('submit', onModifyPlayer)
   $('#modify-player').on('submit', onModifyPlayer)
-  $('#view-PlayersList').on('click', '#deleteB', onDeletePlayer)
+  $('#view-PlayersList').on('click', '#deleteBttn', onDeletePlayer)
   $('#find-player').on('submit', onFindPlayer)
   $('#view-allPlayers').on('submit', onGetPlayers)
   $('#view-mode').on('click', onToggleViewMode)
   $('#entry-mode').on('click', onToggleEntryMode)
+  $('#view-modify-form').on('click', onShowModForm)
 }
 
 module.exports = {

@@ -83,23 +83,7 @@
 
 <!-- begins the area where we find a player or enter data -->
 <div class="enter-data">
-<!-- Begin Find a player -->
-        <form id="find-player">
-          <fieldset>
-            <legend>Find a Player</legend>
-              <input type="text" name="player[first_name]" placeholder="First Name">
-              <br>
-              <input type="text" name="player[last_name]" placeholder="Last Name">
-              <input type="submit" name="submit" value="Find Player">
-          </fieldset>
-        </form>
-        <div id="show-a-player"></div>
-
-        <button type="submit" name="modify-player">Update Player</button>
-        <br>
-        <!-- Ends find a player -->
         <!-- class="enter-data" -->
-
         <form id="enter-player">
           <fieldset>
             <legend>Enter Player Information</legend>
@@ -120,7 +104,7 @@
               <input class="program-radio" type="radio" name="player[program]" value="SB Seniors">
               SB Seniors
               <br>
-              <textarea rows="6" cols="50" name="Notes" form="enter-player"></textarea>
+              <textarea rows="6" cols="50" name="player[notes]" form="enter-player"></textarea>
               <br>
               <input type="text" name="player[catch]" placeholder="Catching">
               <br>
@@ -152,13 +136,50 @@
           <input type="submit" name="submit" value="View Assessment Data">
         </fieldset>
         </form>
-        <!-- <form id="deletePlayerButton">
-          Player to Delete <input type="number" name="player[id]">
-          <button name='deletePlayerButton' type='click'>Delete Player</button>
-        </form> -->
+        <button id="view-modify-form" type="click">Modify a Player</button>
 
 
         <div id="view-PlayersList">
+        </div>
+
+        <div id="modify-a-player">
+          <form id="modify-player">
+            <fieldset>
+              <legend>Enter Player Information</legend>
+                <input type="text" name="player[id]" placeholder="Player ID">
+                <br>
+                <input type="text" name="player[first_name]" placeholder="First Name">
+                <br>
+                <input type="text" name="player[last_name]" placeholder="Last Name">
+                <br>
+                <input type="text" name="player[age]" placeholder="Age">
+                <br>
+                <input type="text" name="player[grade]" placeholder="Grade">
+                <br>
+                <input class="program-radio" type="radio" name="player[program]" value="Single A"> Single A
+                <input class="program-radio" type="radio" name="player[program]" value="Double A"> Double A
+                <input class="program-radio" type="radio" name="player[program]" value="Triple A"> Triple A
+                <input class="program-radio" type="radio" name="player[program]" value="Majors"> Majors
+                <input class="program-radio" type="radio" name="player[program]" value="SB Farm"> SB Farm
+                <input class="program-radio" type="radio" name="player[program]" value="SB Juniors"> SB Juniors
+                <input class="program-radio" type="radio" name="player[program]" value="SB Seniors">
+                SB Seniors
+                <br>
+                <textarea rows="6" cols="50" name="player[notes]" form="enter-player"></textarea>
+                <br>
+                <input type="text" name="player[catch]" placeholder="Catching">
+                <br>
+                <input type="text" name="player[throw]" placeholder="Throwing">
+                <br>
+                <input type="text" name="player[pitch]" placeholder="Pitching">
+                <br>
+                <input type="text" name="player[bat]" placeholder="Batting">
+                <br>
+                <input type="text" name="player[athleticism]" placeholder="Athleticism">
+                <br>
+                <input type="submit" name="submit" value="Modify Player">
+            </fieldset>
+          </form>
         </div>
 
       </div>
