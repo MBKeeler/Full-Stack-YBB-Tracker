@@ -1,6 +1,7 @@
 'use strict'
 // const config = require('../config')
 // const store = require('../store')
+const app_api = require('./app_api')
 const showPlayerTemplate = require('../templates/helpers/player_list.handlebars')
 const store = require('../store')
 
@@ -34,19 +35,20 @@ const findPlayerFailure = function (error) {
 
 const deletePlayerSuccess = function () {
   console.log('deletePlayerSuccess called')
+  app_api.showAllPlayers()
 }
 
 const deletePlayerFailure = function (error) {
   console.log('deletePlayerFailure called', error)
 }
 
-const showAllPlayersSuccess = function (data) {
-  console.log('showAllPlayersSuccess called', data)
-}
-
-const showAllPlayersFailure = function (error) {
-  console.log('showAllPlayersFailure called', error)
-}
+// const showAllPlayersSuccess = function (data) {
+//   console.log('showAllPlayersSuccess called', data)
+// }
+//
+// const showAllPlayersFailure = function (error) {
+//   console.log('showAllPlayersFailure called', error)
+// }
 
 const getPlayersSuccess = (data) => {
   console.log(data)
@@ -74,8 +76,8 @@ module.exports = {
   findPlayerFailure,
   deletePlayerSuccess,
   deletePlayerFailure,
-  showAllPlayersSuccess,
-  showAllPlayersFailure,
+  // showAllPlayersSuccess,
+  // showAllPlayersFailure,
   toggleEntryMode,
   toggleViewMode,
   getPlayersSuccess
