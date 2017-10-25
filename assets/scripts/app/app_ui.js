@@ -58,6 +58,7 @@ const deletePlayerFailure = function (error) {
 const getPlayersSuccess = (data) => {
   // console.log(data)
   $('#view-PlayersList').show()
+  $('#view-PlayersList').empty()
   const showPlayersHtml = showPlayerTemplate({ players: data.players })
   $('#view-PlayersList').append(showPlayersHtml)
   // $('#view-allPlayers').append(showPlayersHtml)
