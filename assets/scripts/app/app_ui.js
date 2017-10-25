@@ -6,7 +6,7 @@ const showPlayerTemplate = require('../templates/helpers/player_list.handlebars'
 // const store = require('../store')
 
 const enterPlayerSuccess = function () {
-  console.log('data entered successfully')
+//  console.log('data entered successfully')
   $('#nav-message').html('Player data entered successfully')
   $(':input', '#enter-data').empty()
 }
@@ -25,7 +25,7 @@ const modifyPlayerFailure = function (error) {
 }
 
 const findPlayerSuccess = function (data) {
-  console.log('findPlayerSuccess called', data)
+//  console.log('findPlayerSuccess called', data)
   $('show-a-player').html('data goes here: ' + data)
 }
 
@@ -34,7 +34,7 @@ const findPlayerFailure = function (error) {
 }
 
 const deletePlayerSuccess = function () {
-  console.log('deletePlayerSuccess called')
+  // console.log('deletePlayerSuccess called')
   app_api.showAllPlayers()
 }
 
