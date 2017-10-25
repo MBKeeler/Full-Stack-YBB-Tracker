@@ -3,7 +3,7 @@ const config = require('../config')
 const store = require('../store')
 
 const enterPlayer = function (data) {
-  console.log('app_api.enterPlayer called:', data)
+//  console.log('app_api.enterPlayer called:', data)
   return $.ajax({
     url: config.apiOrigin + '/players',
     method: 'POST',
@@ -15,7 +15,7 @@ const enterPlayer = function (data) {
 }
 
 const modifyPlayer = function (data) {
-  console.log('app_api.modifyPlayer called: ', data.player.id)
+//  console.log('app_api.modifyPlayer called: ', data.player.id)
   const playerID = data.player.id
   return $.ajax({
     url: config.apiOrigin + '/players/' + playerID,
@@ -28,7 +28,7 @@ const modifyPlayer = function (data) {
 }
 
 const deletePlayer = function (data) {
-  console.log('deltePlayer called')
+//  console.log('deltePlayer called')
   return $.ajax({
     url: config.apiOrigin + '/players/' + data,
     method: 'DELETE',
@@ -40,7 +40,7 @@ const deletePlayer = function (data) {
 }
 
 const findPlayer = function (data) {
-  console.log('app_api.findPlayer called', data)
+//  console.log('app_api.findPlayer called', data)
   return $.ajax({
     url: config.apiOrigin + '/players',
     method: 'GET',
@@ -52,7 +52,7 @@ const findPlayer = function (data) {
 }
 
 const showAllPlayers = function () {
-  console.log('showAllPlayers called')
+//  console.log('showAllPlayers called')
   return $.ajax({
     url: config.apiOrigin + '/players',
     method: 'GET',
@@ -70,23 +70,3 @@ module.exports = {
   findPlayer,
   showAllPlayers
 }
-
-//  associated curl .sh with enterData
-// POST "http://localhost:4741/players" \
-//   --header "Content-Type: application/json" \
-//   --header "Authorization: Token token=$TOKEN" \
-//   --data '{
-//     "player": {
-//       "first_name": "'"${FIRST_NAME}"'",
-//       "last_name": "'"${LAST_NAME}"'",
-//       "age": "'"${AGE}"'",
-//       "grade": "'"${GRADE}"'",
-//       "program": "'"${PROGRAM}"'",
-//       "notes": "'"${NOTES}"'"
-//       "catch": "'"${CATCH}"'",
-//       "throw": "'"${THROW}"'",
-//       "pitch": "'"${PITCH}"'",
-//       "bat": "'"${BAT}"'",
-//       "athleticism": "'"${ATHLETICISM}"'"
-//     }
-//   }'

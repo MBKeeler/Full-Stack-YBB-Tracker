@@ -8,16 +8,18 @@ const showPlayerTemplate = require('../templates/helpers/player_list.handlebars'
 const enterPlayerSuccess = function () {
 //  console.log('data entered successfully')
   $('#nav-message').html('Player data entered successfully')
-  $(':input', '#enter-data').empty()
+  $(':input', '#modify-player').val(' ')
 }
 
 const enterPlayerFailure = function (error) {
-  console.error('enterPlayer failed: ', error)
+  // console.error('enterPlayer failed: ', error)
   $('#signup-message').html('Player has not been saved. Please check your data and try again.')
 }
 
 const modifyPlayerSuccess = function () {
-  console.log('modifyPlayerSuccess called')
+//  console.log('modifyPlayerSuccess called')
+$('#nav-message').html('Player data updated successfully')
+$(':input', '#enter-data').empty()
 }
 
 const modifyPlayerFailure = function (error) {
@@ -51,7 +53,7 @@ const deletePlayerFailure = function (error) {
 // }
 
 const getPlayersSuccess = (data) => {
-  console.log(data)
+  // console.log(data)
   $('#view-PlayersList').show()
   const showPlayersHtml = showPlayerTemplate({ players: data.players })
   $('#view-PlayersList').append(showPlayersHtml)
@@ -80,7 +82,6 @@ const revealChngPwForm = function () {
 const hideChngePwForm = function () {
   $('#change-password').hide()
 }
-
 
 module.exports = {
   enterPlayerSuccess,

@@ -43,8 +43,7 @@ const onSignOut = function (event) {
 // for change password
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('change password ran!')
-
+  // console.log('change password ran!')
   const data = getFormFields(this)
   console.log(data)
   api.changePassWord(data)
@@ -63,7 +62,7 @@ const onEnterPlayer = function (event) {
 }
 
 const onModifyPlayer = function (event) {
-  console.log('onModifyPlayer called')
+  // console.log('onModifyPlayer called')
   const data = getFormFields(this)
   event.preventDefault()
   app_api.modifyPlayer(data)
@@ -83,7 +82,7 @@ const onDeletePlayer = function (event) {
 }
 
 const onFindPlayer = function (event) {
-  console.log('onFindPlayer called')
+  // console.log('onFindPlayer called')
   const data = getFormFields(this)
   event.preventDefault()
   //  console.log('sign-up', data)
