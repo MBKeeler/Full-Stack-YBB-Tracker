@@ -18,6 +18,7 @@ const enterPlayerFailure = function (error) {
 
 const modifyPlayerSuccess = function () {
 //  console.log('modifyPlayerSuccess called')
+  $('#view-PlayersList').empty()
   $('#nav-message').show().html('Player data updated successfully').fadeOut(7000)
   $(':input', '#modify-player').val('')
 }
@@ -38,7 +39,7 @@ const findPlayerFailure = function (error) {
 
 const deletePlayerSuccess = function () {
   // console.log('deletePlayerSuccess called')
-  // $('#view-PlayersList').empty()
+  $('#view-PlayersList').empty()
   $('#nav-message').show().html('Player deleted successfully').fadeOut(7000)
 }
 
