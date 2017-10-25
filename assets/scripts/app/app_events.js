@@ -7,7 +7,7 @@ const ui = require('./app_ui')
 const onEnterPlayer = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  console.log('enterPlayer called', data)
+  // console.log('enterPlayer called', data)
   api.enterPlayer(data)
     .then(ui.enterPlayerSuccess)
     .catch(ui.enterPlayerFailure)
@@ -23,7 +23,7 @@ const onModifyPlayer = function (event) {
 }
 
 const onDeletePlayer = function (event) {
-  console.log('onDeletePlayer called')
+  // console.log('onDeletePlayer called')
   const data = getFormFields(this)
   event.preventDefault()
   //  console.log('sign-up', data)
@@ -33,7 +33,7 @@ const onDeletePlayer = function (event) {
 }
 
 const onFindPlayer = function (event) {
-  console.log('onFindPlayer called')
+  // console.log('onFindPlayer called')
   const data = getFormFields(this)
   event.preventDefault()
   //  console.log('sign-up', data)
@@ -43,7 +43,7 @@ const onFindPlayer = function (event) {
 }
 
 const onShowAllPlayers = function (event) {
-  console.log('onShowAllPlayers called')
+  // console.log('onShowAllPlayers called')
   const data = getFormFields(this)
   event.preventDefault()
   //  console.log('sign-up', data)
@@ -58,10 +58,6 @@ const addHandlers = function () {
   $('#delete-player').on('click', onDeletePlayer)
   $('#find-player').on('click', onFindPlayer)
   $('#view-allPlayers').on('click', onShowAllPlayers)
-
-  // $('#sign-in').on('submit', onSignIn)
-  // $('#sign-out').on('submit', onSignOut)
-  // $('#change-password').on('submit', onChangePassword)
 }
 
 module.exports = {
