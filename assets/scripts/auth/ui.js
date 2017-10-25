@@ -10,7 +10,7 @@ const signUpSuccess = function (data) {
 
 const signUpFailure = function (error) {
   console.error(error)
-  $('#signup-message').html('Sign up has <span style="color:#ff0000">failed</span>. Please try again.')
+  $('#signup-message').html('Sign up has <span style="color:#f4c542">failed</span>. Please try again.')
 }
 
 const signInSuccess = function (data) {

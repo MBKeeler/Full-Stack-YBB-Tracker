@@ -7,8 +7,8 @@ const showPlayerTemplate = require('../templates/helpers/player_list.handlebars'
 
 const enterPlayerSuccess = function () {
 //  console.log('data entered successfully')
-  $('#nav-message').html('Player data entered successfully')
-  $(':input', '#modify-player').val(' ')
+  $('#nav-message').show().html('Player data entered successfully')
+  $(':input', '#enter-player').val('')
 }
 
 const enterPlayerFailure = function (error) {
@@ -18,8 +18,8 @@ const enterPlayerFailure = function (error) {
 
 const modifyPlayerSuccess = function () {
 //  console.log('modifyPlayerSuccess called')
-$('#nav-message').html('Player data updated successfully')
-$(':input', '#enter-data').empty()
+  $('#nav-message').show().html('Player data updated successfully')
+  $(':input', '#modify-player').val('')
 }
 
 const modifyPlayerFailure = function (error) {
@@ -37,7 +37,9 @@ const findPlayerFailure = function (error) {
 
 const deletePlayerSuccess = function () {
   // console.log('deletePlayerSuccess called')
-  app_api.showAllPlayers()
+  // $('#view-PlayersList').empty()
+  $('#nav-message').html('Player deleted successfully')
+  $('data-id')
 }
 
 const deletePlayerFailure = function (error) {

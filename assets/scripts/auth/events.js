@@ -33,7 +33,7 @@ const onSignIn = function (event) {
 const onSignOut = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  console.log('onSignOut: ', data)
+// console.log('onSignOut: ', data)
   //  console.log(data)
   api.signOut(data)
     .then(ui.signOutSuccess)
@@ -45,7 +45,7 @@ const onChangePassword = function (event) {
   event.preventDefault()
   // console.log('change password ran!')
   const data = getFormFields(this)
-  console.log(data)
+  //console.log(data)
   api.changePassWord(data)
     .then(ui.changePWSuccess)
     .catch(ui.changePWFailure)
