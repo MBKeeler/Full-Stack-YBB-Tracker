@@ -18,7 +18,7 @@ const signInSuccess = function (data) {
   $('.enter-data').show()
   $('.welcome-box').hide()
   $('.navigation-bar').show()
-  $('#nav-message').html('You have signed in successfully').fadeOut(8000)
+  $('#nav-message').html('You have signed in successfully').fadeOut(7000)
   // we have to store the user data or header somwhere.  sto we will put it in ../store.js
   store.user = data.user
 }
