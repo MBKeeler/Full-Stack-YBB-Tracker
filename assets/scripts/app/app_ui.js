@@ -7,6 +7,7 @@ const showPlayerTemplate = require('../templates/helpers/player_list.handlebars'
 
 const enterPlayerSuccess = function () {
 //  console.log('data entered successfully')
+  $('#view-PlayersList').empty()
   $('#nav-message').show().html('Player data entered successfully').fadeOut(7000)
   $(':input', '#enter-player').val('')
 }
