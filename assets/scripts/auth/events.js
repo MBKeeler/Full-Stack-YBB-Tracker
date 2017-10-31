@@ -45,7 +45,7 @@ const onChangePassword = function (event) {
   event.preventDefault()
   // console.log('change password ran!')
   const data = getFormFields(this)
-  //console.log(data)
+  //  console.log(data)
   api.changePassWord(data)
     .then(ui.changePWSuccess)
     .catch(ui.changePWFailure)
@@ -55,7 +55,8 @@ const onChangePassword = function (event) {
 const onEnterPlayer = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  // console.log('enterPlayer called', data)
+  console.log('enterPlayer called', data)
+  // put field check in here
   app_api.enterPlayer(data)
     .then(app_ui.enterPlayerSuccess)
     .catch(app_ui.enterPlayerFailure)

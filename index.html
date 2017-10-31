@@ -84,13 +84,14 @@
         <form id="enter-player">
           <fieldset>
             <legend>Enter Player Information</legend>
-              <input type="text" name="player[first_name]" placeholder="First Name">
+            <p class="important_message">All fields except Notes are required.</p>
+              First Name: <input type="text" name="player[first_name]" placeholder="First Name" required>
               <br>
-              <input type="text" name="player[last_name]" placeholder="Last Name">
+              Last Name: <input type="text" name="player[last_name]" placeholder="Last Name" required>
               <br>
-              <input type="text" name="player[age]" placeholder="Age">
+              Age: <input type="text" name="player[age]" placeholder="Age" required>
               <br>
-              <input type="text" name="player[grade]" placeholder="Grade">
+              Grade: <input type="text" name="player[grade]" placeholder="Grade" required>
               <br>
               <input class="program-radio" type="radio" name="player[program]" value="Single A"> Single A
               <input class="program-radio" type="radio" name="player[program]" value="Double A"> Double A
@@ -101,17 +102,17 @@
               <input class="program-radio" type="radio" name="player[program]" value="SB Seniors">
               SB Seniors
               <br>
-              <textarea rows="6" cols="50" name="player[notes]" form="enter-player"></textarea>
+              Notes: <textarea rows="6" cols="50" name="player[notes]" form="enter-player"></textarea>
               <br>
-              <input type="text" name="player[catch]" placeholder="Catching">
+              Catching Score:<input class="score" type="text" name="player[catch]" required>
               <br>
-              <input type="text" name="player[throw]" placeholder="Throwing">
+              Throwing Score:<input class="score" type="text" name="player[throw]" required>
               <br>
-              <input type="text" name="player[pitch]" placeholder="Pitching">
+              Pitching Score:<input class="score" type="text" name="player[pitch]" required>
               <br>
-              <input type="text" name="player[bat]" placeholder="Batting">
+              Batting Score: <input class="score" type="text" name="player[bat]" required>
               <br>
-              <input type="text" name="player[athleticism]" placeholder="Athleticism">
+              Athleticism Score: <input class="score" type="text" name="player[athleticism]" required>
               <br>
               <button type="submit" name="submit" value="Enter New Player">Enter New Player</button>
           </fieldset>

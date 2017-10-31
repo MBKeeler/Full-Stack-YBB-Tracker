@@ -31,8 +31,15 @@ button:hover {
 legend {
   color: #fff;
 }
+
 input, textarea {
   color: #000;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.score {
+  width: 2em;
 }
 
 .auth-forms {
@@ -57,6 +64,10 @@ input, textarea {
   float: left;
   width: 350px;
   margin: 20px 25px 20px 25px
+}
+
+.important_message {
+color:  #f4c542;
 }
 
 .navigation-bar, .enter-data, .view-data, #change-password, #modify-a-player {
