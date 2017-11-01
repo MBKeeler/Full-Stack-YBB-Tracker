@@ -45,10 +45,15 @@ const onChangePassword = function (event) {
   event.preventDefault()
   // console.log('change password ran!')
   const data = getFormFields(this)
-  //  console.log(data)
-  api.changePassWord(data)
-    .then(ui.changePWSuccess)
-    .catch(ui.changePWFailure)
+  // console.log(data)
+  // console.log(data.passwords.old, data.passwords.new)
+  if (data.passwords.old === data.passwords.new) {
+    ui.notUniquePw()
+  } else {
+    api.changePassWord(data)
+      .then(ui.changePWSuccess)
+      .catch(ui.changePWFailure)
+  }
 }
 
 // app functions I will want to move out into it's own

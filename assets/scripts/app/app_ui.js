@@ -8,25 +8,25 @@ const showPlayerTemplate = require('../templates/helpers/player_list.handlebars'
 const enterPlayerSuccess = function () {
 //  console.log('data entered successfully')
   $('#view-PlayersList').empty()
-  $('#nav-message').show().html('Player data entered successfully').fadeOut(7000)
+  $('#nav-message').show().html('New player data entered successfully').fadeOut(8000)
   $(':input', '#enter-player').val('')
 }
 
 const enterPlayerFailure = function (error) {
-  // console.error('enterPlayer failed: ', error)
+  console.error('enterPlayer failed: ', error)
   $('#signup-message').html('Player has not been saved. Please check your data and try again.')
 }
 
 const modifyPlayerSuccess = function () {
 //  console.log('modifyPlayerSuccess called')
   $('#view-PlayersList').empty()
-  $('#nav-message').show().html('Player data updated successfully').fadeOut(7000)
+  $('#nav-message').show().html('Player data updated successfully').fadeOut(8000)
   $(':input', '#modify-player').val('')
 }
 
 const modifyPlayerFailure = function (error) {
   console.log('modifyPlayerFailure called', error)
-  $('#nav-message').show().html('Player not found.  Check ID').fadeOut(7000)
+  $('#nav-message').show().html('Updates to this player were note saved. Verify you are an owner of this player.').fadeOut(8000)
 }
 
 const findPlayerSuccess = function (data) {
@@ -36,16 +36,18 @@ const findPlayerSuccess = function (data) {
 
 const findPlayerFailure = function (error) {
   console.log('findPlayerFailure called', error)
+  $('#nav-message').show().html('Player could not be found. Check your criteria and try again.').fadeOut(8000)
 }
 
 const deletePlayerSuccess = function () {
   // console.log('deletePlayerSuccess called')
   $('#view-PlayersList').empty()
-  $('#nav-message').show().html('Player deleted successfully').fadeOut(7000)
+  $('#nav-message').show().html('Player deleted successfully').fadeOut(8000)
 }
 
 const deletePlayerFailure = function (error) {
   console.log('deletePlayerFailure called', error)
+  $('#nav-message').show().html('Player was not deleted. Verify you are an owner of this player before trying to delete.').fadeOut(8000)
 }
 
 // const showAllPlayersSuccess = function (data) {
