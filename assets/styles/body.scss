@@ -38,6 +38,10 @@ input, textarea {
   margin-left: 5px;
 }
 
+// input:invalid {
+//   border: 2px dashed red;
+// }
+
 .score {
   width: 2em;
 }
@@ -69,7 +73,9 @@ input, textarea {
 .important_message {
 color:  #f4c542;
 }
-
+.navigation-bar {
+  position: fixed;
+}
 .navigation-bar, .enter-data, .view-data, #change-password, #modify-a-player {
   display: none;
 }
@@ -88,7 +94,7 @@ color:  #f4c542;
 }
 
 .enter-data, .view-data {
-  margin: 65px auto;
+  margin: 150px auto;
   width: 850px;
   // min-height: 450px;
 }
@@ -140,6 +146,9 @@ form {
   text-align: center;
 }
 
-#nav-message, #mode-switch {
+// #nav-message, #mode-switch {
+//   margin: auto auto auto 50px;
+// }
+#nav-message {
   margin: auto auto auto 50px;
 }

@@ -22,7 +22,7 @@ const enterPlayerSuccess = function () {
 const enterPlayerFailure = function (error) {
   console.error('enterPlayer failed: ', error)
   $('#view-PlayersList').empty()
-  $('#nav-message').show().html('Player failed to save.  Please verify you have filled out all required fields.').fadeOut(8000)
+  $('#nav-message').show().html('Player failed to save.  Please verify you have filled out all required fields correctly.').fadeOut(8000)
 }
 
 const modifyPlayerSuccess = function () {
@@ -34,7 +34,7 @@ const modifyPlayerSuccess = function () {
 
 const modifyPlayerFailure = function (error) {
   console.log('modifyPlayerFailure called', error)
-  $('#nav-message').show().html('Updates to this player were note saved. Verify you are an owner of this player.').fadeOut(8000)
+  $('#nav-message').show().html('Updates to this player were note saved. Verify all fields in the form are filled in correctly and that you are an owner of this player.').fadeOut(8000)
 }
 
 const findPlayerSuccess = function (data) {
