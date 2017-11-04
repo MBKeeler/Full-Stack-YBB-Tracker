@@ -12,9 +12,17 @@ const enterPlayerSuccess = function () {
   $(':input', '#enter-player').val('')
 }
 
+// const checkFormData = function () {
+// //  console.log('data entered successfully')
+//   $('#view-PlayersList').empty()
+//   $('#nav-message').show().html('All form fields except notes are required. Please veify you have entered valid form data').fadeOut(8000)
+//   $(':input', '#enter-player').val('')
+// }
+
 const enterPlayerFailure = function (error) {
   console.error('enterPlayer failed: ', error)
-  $('#signup-message').html('Player has not been saved. Please check your data and try again.')
+  $('#view-PlayersList').empty()
+  $('#nav-message').show().html('Player failed to save.  Please verify you have filled out all required fields.').fadeOut(8000)
 }
 
 const modifyPlayerSuccess = function () {
@@ -107,4 +115,5 @@ module.exports = {
   toggleModForm,
   revealChngPwForm,
   hideChngePwForm
+  // checkFormData
 }
